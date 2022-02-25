@@ -21,8 +21,8 @@ const Calculator = () => {
         <section className="grid grid-rows-5 pt-3">
           <div className="h-12 p-1 grid grid-cols-4 gap-2 font-roboto">
             <div className="flex justify-center"><button id="C" onClick={(e) => {setDisplayText(""); setResult(0)}} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">C</button></div>
-            <div className="flex justify-center"><button id="Del" onClick={(e) => setDisplayText(prev => prev + e.target.id)} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">Del</button></div>
-            <div className="flex justify-center"><button id="%" onClick={(e) => setDisplayText(prev => prev + e.target.id)} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">%</button></div>
+            <div className="flex justify-center"><button id="Del" onClick={(e) => setDisplayText(prev => prev.substring(0,prev.length-1))} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">Del</button></div>
+            <div className="flex justify-center"><button id="%" onClick={(e) => setDisplayText(prev => prev * 1/100)} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">%</button></div>
             <div className="flex justify-center"><button id="/" onClick={(e) => setDisplayText(prev => prev + e.target.id)} className="shadow focus:shadow-none w-full h-full bg-yellow-200 rounded-md border-yellow-300 text-yellow-600">/</button></div>
           </div>
           <div className="p-1 grid grid-cols-4 gap-2 font-roboto">
